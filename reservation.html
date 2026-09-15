@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Reservation — Newday Film</title>
+<meta name="description" content="Newday Film 예약신청">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .reservation-box{
+    max-width:960px;
+    margin:0 auto;
+    border:1px solid var(--ink);
+    padding:50px 60px;
+  }
+  .reservation-title{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:20px;
+  }
+  .reservation-row{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .btn-write{
+    background:#d9d9d9;
+    color:var(--ink);
+    padding:14px 24px;
+    font-size:14px;
+    font-weight:600;
+  }
+  .reservation-row .desc{ font-size:13.5px; color:var(--ink-soft); }
+  .reservation-divider{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:44px 0;
+  }
+  .reservation-search input{
+    border:1px solid var(--line);
+    padding:12px 16px;
+    font-size:13.5px;
+    width:260px;
+    max-width:60vw;
+    font-family:var(--sans);
+  }
+  .btn-search{
+    background:var(--ink);
+    color:#fff;
+    padding:12px 26px;
+    font-size:13.5px;
+    border:none;
+    font-family:var(--sans);
+    cursor:pointer;
+  }
+  @media (max-width:640px){
+    .reservation-box{ padding:36px 24px; }
+    .reservation-row{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-word"><a href="index.html">Newday Film</a></div>
+  <div class="logo-sub">FILM STUDIO</div>
+
+  <nav class="main-nav">
+    <div class="wrap">
+      <ul>
+        <li class=""><a href="index.html">OUR STORY</a></li>
+        <li class=""><a href="wedding-film.html">WEDDING FILM</a></li>
+        <li class=""><a href="snap.html">SNAP</a></li>
+        <li class=""><a href="commercial.html">COMMERCIAL</a></li>
+        <li class=""><a href="product.html">PRODUCT</a></li>
+        <li class=""><a href="qna.html">Q&amp;A</a></li>
+        <li class="current"><a href="reservation.html">RESERVATION</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="social-row">
+    <a href="#" aria-label="Instagram">IG</a>
+    <a href="#" aria-label="Blog">B</a>
+    <a href="#" aria-label="KakaoTalk">T</a>
+  </div>
+</header>
+
+
+<main class="wrap" style="padding:0 24px 60px;">
+  <div class="reservation-box">
+    <div class="reservation-title">Newday Film 예약신청</div>
+    <div class="reservation-row">
+      <a href="#" class="btn-write">예약신청서 작성하기</a>
+      <span class="desc">예약신청서를 작성해주세요.</span>
+    </div>
+
+    <hr class="reservation-divider">
+
+    <div class="reservation-title" style="font-size:17px;">내 예약신청서 확인</div>
+    <form class="reservation-row reservation-search" onsubmit="return false;">
+      <input type="text" placeholder="작성자로 검색하세요">
+      <button type="submit" class="btn-search">검색</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-info">
+    ADDRESS <b>OO시 OO구 OO로 00</b> &nbsp;|&nbsp; TEL <b>010-0000-0000</b>
+  </div>
+  <div class="copyright">Copyright (C) Newday Film All Rights Reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
