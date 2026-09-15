@@ -63,7 +63,7 @@
   <nav class="main-nav">
     <div class="wrap">
       <ul>
-        <li class=""><a href="index.html">OUR STORY</a></li>
+        <li class=""><a href="our-story.html">OUR STORY</a></li>
         <li class=""><a href="wedding-film.html">WEDDING FILM</a></li>
         <li class=""><a href="snap.html">SNAP</a></li>
         <li class=""><a href="commercial.html">COMMERCIAL</a></li>
@@ -83,83 +83,31 @@
 
 
 <main class="wrap" style="padding:0 24px 60px;">
-  <table class="qna-table">
-    <thead>
-      <tr><th style="width:60px;">번호</th><th>제목</th><th style="width:100px;">글쓴이</th><th style="width:60px;">조회</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="num">138</td>
-        <td class="title"><a href="#">본식영상 문의드립니다</a></td>
-        <td class="writer">고객1</td>
-        <td class="views">2</td>
-      </tr>
-      <tr>
-        <td class="num">137</td>
-        <td class="title"><a href="#">본식 영상 문의드립니다.</a></td>
-        <td class="writer">고객2</td>
-        <td class="views">3</td>
-      </tr>
-      <tr>
-        <td class="num">136</td>
-        <td class="title"><a href="#">본식 DVD 문의드려요</a></td>
-        <td class="writer">고객3</td>
-        <td class="views">3</td>
-      </tr>
-      <tr>
-        <td class="num">135</td>
-        <td class="title"><a href="#">본식 스냅 및 영상 문의드립니다.</a></td>
-        <td class="writer">고객4</td>
-        <td class="views">5</td>
-      </tr>
-      <tr>
-        <td class="num">134</td>
-        <td class="title"><a href="#">본식 영상 문의 드립니다.</a></td>
-        <td class="writer">고객5</td>
-        <td class="views">7</td>
-      </tr>
-      <tr>
-        <td class="num">133</td>
-        <td class="title"><a href="#">본식스냅과 원판 문의드려요~</a></td>
-        <td class="writer">고객6</td>
-        <td class="views">10</td>
-      </tr>
-      <tr>
-        <td class="num">132</td>
-        <td class="title"><a href="#">본식 원판 문의드립니다.</a></td>
-        <td class="writer">고객7</td>
-        <td class="views">8</td>
-      </tr>
-      <tr>
-        <td class="num">131</td>
-        <td class="title"><a href="#">웨딩영상, 본식 스냅, 원판 문의드립니다</a></td>
-        <td class="writer">고객8</td>
-        <td class="views">5</td>
-      </tr>
-      <tr>
-        <td class="num">130</td>
-        <td class="title"><a href="#">웨딩영상 문의드려요~</a></td>
-        <td class="writer">고객9</td>
-        <td class="views">5</td>
-      </tr>
-      <tr>
-        <td class="num">129</td>
-        <td class="title"><a href="#">웨딩+돌잔치 촬영문의드립니다</a></td>
-        <td class="writer">고객10</td>
-        <td class="views">3</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="qna-actions">
-    <a href="#" class="btn-outline">목록보기</a>
-    <a href="#" class="btn-solid">글쓰기</a>
+  <div class="page-quote" style="margin-bottom:40px;">
+    궁금하신 점을 자유롭게 남겨주세요. 확인 후 답변 드리겠습니다.
   </div>
 
-  <div class="qna-pagination">
-    <span class="active">1</span>
-    <a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">&gt;</a>
-  </div>
+  <!--
+    ▼ 실제로 작동하는 Q&A 게시판 (giscus)
+    깃허브 Discussions 기반이라 방문자가 실제로 글을 쓰고 목록도 보입니다.
+    아래 script 태그의 data-repo, data-repo-id, data-category, data-category-id 값을
+    본인 것으로 바꿔야 작동합니다. (설정 방법은 채팅으로 안내드릴게요)
+  -->
+  <script src="https://giscus.app/client.js"
+    data-repo="여기에-사용자명/저장소이름"
+    data-repo-id="여기에-repo-id"
+    data-category="Q&A"
+    data-category-id="여기에-category-id"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="ko"
+    crossorigin="anonymous"
+    async>
+  </script>
 </main>
 
 <footer>
