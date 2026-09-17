@@ -8,85 +8,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .price-columns{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    border:1px solid var(--line);
+  .product-title{
+    text-align:center;
+    font-family:'Noto Serif KR', serif;
+    font-size:40px;
+    color:var(--ink);
+    margin-bottom:50px;
   }
-  .price-col{
-    padding:50px 36px;
-    border-right:1px solid var(--line);
+
+  .menu-section{ max-width:640px; margin:0 auto 56px; }
+  .menu-section-title{
+    font-size:13px;
+    letter-spacing:0.3em;
+    color:var(--accent);
+    margin-bottom:24px;
   }
-  .price-col:last-child{ border-right:none; }
-  .price-col .name{
+  .menu-item{ margin-bottom:26px; }
+  .menu-item:last-child{ margin-bottom:0; }
+  .menu-item-row{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  .menu-item-row .name{
     font-family:'Noto Serif KR', serif;
     font-weight:500;
-    font-size:27px;
+    font-size:18px;
+    white-space:nowrap;
     color:var(--ink);
-    margin-bottom:6px;
   }
-  .price-col .name-en{
-    font-size:11px;
-    letter-spacing:0.22em;
-    color:var(--ink-faint);
-    margin-bottom:34px;
+  .menu-item-row .dots{
+    flex:1;
+    border-bottom:1px dotted var(--ink-faint);
+    transform:translateY(-5px);
   }
-  .price-col .price{
-    font-family:'Noto Serif KR', serif;
-    font-weight:600;
-    font-size:34px;
-    color:var(--ink);
-    margin-bottom:32px;
-  }
-  .price-col ul{ list-style:none; }
-  .price-col li{
-    position:relative;
-    padding:13px 0 13px 15px;
-    border-bottom:1px dotted var(--line);
+  .menu-item-row .price{
     font-size:14px;
+    white-space:nowrap;
     color:var(--ink);
   }
-  .price-col li::before{
-    content:"•";
-    color:var(--accent);
-    position:absolute;
-    left:0;
-  }
-  .price-col .col-desc{
-    margin-top:26px;
-    font-size:12.5px;
+  .menu-item .desc{
+    font-size:13px;
     color:var(--ink-soft);
-    line-height:1.9;
+    margin-top:8px;
+    line-height:1.8;
   }
-
-  .option-label{
-    font-size:12px;
-    letter-spacing:0.3em;
-    color:var(--ink-faint);
-    margin:60px 0 18px;
-  }
-  .option-row{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    border:1px solid var(--line);
-  }
-  .option-item{
-    padding:26px 32px;
-    border-right:1px solid var(--line);
-  }
-  .option-item:last-child{ border-right:none; }
-  .option-item .label{ font-size:14px; color:var(--ink); margin-bottom:6px; }
-  .option-item .add-price{ font-size:13px; color:var(--accent); }
-
-  @media (max-width:820px){
-    .price-columns, .option-row{ grid-template-columns:1fr; }
-    .price-col{ border-right:none; border-bottom:1px solid var(--line); }
-    .price-col:last-child{ border-bottom:none; }
-    .option-item{ border-right:none; border-bottom:1px solid var(--line); }
-    .option-item:last-child{ border-bottom:none; }
+  .menu-item .note{
+    font-size:12.5px;
+    color:var(--accent);
+    margin-top:8px;
+    line-height:1.8;
   }
 </style>
 </head>
@@ -116,71 +90,38 @@
 
 
 <main class="wrap" style="padding:50px 24px 80px;">
+  <div class="product-title">Product</div>
 
-  <div class="price-columns">
-    <div class="price-col">
-      <div class="name">베이직</div>
-      <div class="name-en">BASIC</div>
-      <div class="price">49만원</div>
-      <ul>
-        <li>1인 2캠</li>
-        <li>식전영상</li>
-        <li>본식영상</li>
-        <li>식후영상</li>
-        <li>1분 하이라이트 영상</li>
-      </ul>
+  <!-- 패키지 -->
+  <div class="menu-section">
+    <div class="menu-section-title">PACKAGE</div>
+
+    <div class="menu-item">
+      <div class="menu-item-row"><span class="name">베이직</span><span class="dots"></span><span class="price">49만원</span></div>
+      <p class="desc">1인 2캠 · 식전영상 · 본식영상 · 식후영상 · 1분 하이라이트 영상</p>
     </div>
 
-    <div class="price-col">
-      <div class="name">시그니처</div>
-      <div class="name-en">SIGNATURE</div>
-      <div class="price">65만원</div>
-      <ul>
-        <li>1인 3캠</li>
-        <li>식전영상</li>
-        <li>본식영상</li>
-        <li>식후영상</li>
-        <li>부모님 하이라이트 영상</li>
-        <li>3-4분 하이라이트 영상</li>
-      </ul>
+    <div class="menu-item">
+      <div class="menu-item-row"><span class="name">시그니처</span><span class="dots"></span><span class="price">65만원</span></div>
+      <p class="desc">1인 3캠 · 식전영상 · 본식영상 · 식후영상 · 부모님 하이라이트 영상 · 3-4분 하이라이트 영상</p>
     </div>
 
-    <div class="price-col">
-      <div class="name">2인 프리미엄</div>
-      <div class="name-en">PREMIUM</div>
-      <div class="price">99만원</div>
-      <ul>
-        <li>2인 3캠</li>
-        <li>식전영상</li>
-        <li>본식영상</li>
-        <li>식후영상</li>
-        <li>부모님 하이라이트 영상</li>
-        <li>3-4분 하이라이트 영상</li>
-      </ul>
-      <p class="col-desc">
-        2인 촬영의 장점은 신부대기실, 하객맞이 파트를 각자 나누어 촬영하기에
-        신랑, 신부님 그리고 부모님의 모습을 많이 담을 수 있습니다.
-      </p>
+    <div class="menu-item">
+      <div class="menu-item-row"><span class="name">2인 프리미엄</span><span class="dots"></span><span class="price">99만원</span></div>
+      <p class="desc">2인 3캠 · 식전영상 · 본식영상 · 식후영상 · 부모님 하이라이트 영상 · 3-4분 하이라이트 영상</p>
+      <p class="note">2인 촬영의 장점은 신부대기실, 하객맞이 파트를 각자 나누어 촬영하기에 신랑, 신부님 그리고 부모님의 모습을 많이 담을 수 있습니다.</p>
     </div>
   </div>
 
-  <div class="option-label">OPTION</div>
-  <div class="option-row">
-    <div class="option-item">
-      <div class="label">대표 지정</div>
-      <div class="add-price">+ 15만원</div>
-    </div>
-    <div class="option-item">
-      <div class="label">메이크업 촬영 추가</div>
-      <div class="add-price">+ 10만원</div>
-    </div>
-    <div class="option-item">
-      <div class="label">드론 외관촬영</div>
-      <div class="add-price">+ 10만원</div>
-    </div>
+  <!-- 옵션 -->
+  <div class="menu-section">
+    <div class="menu-section-title">OPTION</div>
+    <div class="menu-item"><div class="menu-item-row"><span class="name">대표 지정</span><span class="dots"></span><span class="price">+ 15만원</span></div></div>
+    <div class="menu-item"><div class="menu-item-row"><span class="name">메이크업 촬영 추가</span><span class="dots"></span><span class="price">+ 10만원</span></div></div>
+    <div class="menu-item"><div class="menu-item-row"><span class="name">드론 외관촬영</span><span class="dots"></span><span class="price">+ 10만원</span></div></div>
   </div>
 
-  <p style="text-align:center; font-size:12px; color:var(--ink-faint); margin-top:40px;">* 모든 금액은 부가세가 포함된 금액입니다.</p>
+  <p style="text-align:center; font-size:12px; color:var(--ink-faint);">* 모든 금액은 부가세가 포함된 금액입니다.</p>
 </main>
 
 <footer>
