@@ -10,7 +10,7 @@
   --accent:#c9a27a; /* OUR STORY / KAKAO CHANNEL 같은 라벨용 웜톤 컬러 */
   --bg:#ffffff;
   --line:#e5e5e5;
-  --serif:'Sacramento', cursive;
+  --serif:'Marck Script', cursive;
   --sans:'Pretendard','Noto Sans KR','Malgun Gothic',-apple-system,sans-serif;
   --max:1100px;
 }
@@ -99,7 +99,7 @@ nav.main-nav li > a:hover{ color:var(--ink); }
 nav.main-nav li.current > a{ color:var(--ink); font-weight:700; }
 
 .social-row{
-  display:flex;
+  display:none; /* 일단 숨김 처리 — 다시 보이려면 이 줄만 지우면 됩니다 */
   justify-content:center;
   gap:14px;
   margin:26px 0 40px;
