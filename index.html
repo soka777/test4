@@ -11,62 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* ---- 홈 랜딩 페이지 전용 스타일 ---- */
+  /* ---- 홈 랜딩 페이지: 영상만 크게 ---- */
   .hero{
-    max-width:960px;
+    max-width:1400px;
     margin:0 auto;
+    padding:0 24px;
   }
   .hero .ph{ aspect-ratio:16/9; }
-  .hero-tagline{
-    text-align:center;
-    font-family:var(--serif);
-    font-size:38px;
-    color:var(--ink);
-    margin:36px 0 10px;
-  }
-  .hero-sub{
-    text-align:center;
-    font-size:13.5px;
-    color:var(--ink-soft);
-    margin-bottom:60px;
-  }
-
-  .highlight-row{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-    max-width:960px;
-    margin:0 auto 70px;
-  }
-  .highlight-card{
-    text-align:center;
-    border:1px solid var(--line);
-    padding:28px 12px;
-    transition:border-color .2s ease;
-  }
-  .highlight-card:hover{ border-color:var(--ink); }
-  .highlight-card .ph{ aspect-ratio:1/1; margin-bottom:14px; }
-  .highlight-card .label{ font-size:13px; font-weight:600; }
-
-  .cta-row{
-    text-align:center;
-    margin-bottom:60px;
-  }
-  .cta-row a{
-    display:inline-block;
-    border:1px solid var(--ink);
-    padding:14px 34px;
-    font-size:13px;
-    letter-spacing:0.03em;
-    color:var(--ink);
-    transition:background-color .2s ease, color .2s ease;
-  }
-  .cta-row a:hover{ background:var(--ink); color:#fff; }
-
-  @media (max-width:700px){
-    .highlight-row{ grid-template-columns:repeat(2,1fr); }
-    .hero-tagline{ font-size:28px; }
-  }
+  .hero video, .hero iframe{ width:100%; aspect-ratio:16/9; display:block; }
 </style>
 </head>
 <body>
@@ -94,42 +46,40 @@
 </header>
 
 
-<main class="wrap" style="padding:50px 24px 0;">
+<main style="padding:50px 0 80px;">
 
-  <!-- ▼ 히어로 영상/사진 자리 -->
+  <!-- ▼ 히어로 영상 자리 (아래 3가지 중 하나를 선택해서 쓰세요) -->
+
+  <!-- [기본] 아직 영상이 없을 때 보이는 자리표시자 -->
   <div class="hero">
-    <div class="ph" data-label="HERO VIDEO / PHOTO"></div>
+    <div class="ph" data-label="HERO VIDEO"></div>
   </div>
-  <!--
-    본인 mp4 영상을 넣으려면 위 <div class="ph" data-label="HERO VIDEO / PHOTO"></div> 를
-    지우고 아래 코드로 교체하세요 (video.mp4를 실제 파일명으로 변경, 같은 폴더에 올리기):
 
-    <video autoplay muted loop playsinline style="width:100%; aspect-ratio:16/9; background:#000;">
-      <source src="video.mp4" type="video/mp4">
-    </video>
+  <!--
+    [방법 1] 직접 촬영한 mp4 파일 사용:
+    위의 <div class="hero">...</div> 전체를 지우고 아래 코드로 교체하세요.
+    (video.mp4를 실제 파일명으로 바꾸고, 이 파일과 같은 폴더에 그 영상 파일을 함께 올려주세요)
+
+    <div class="hero">
+      <video autoplay muted loop playsinline controls>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    [방법 2] 유튜브에 올린 영상 연결:
+    아래 코드로 교체하고, 유튜브 영상 주소에서 ID 부분만 가져와 넣으세요.
+    예) https://youtu.be/ABC12345 라면 ID는 "ABC12345" 입니다.
+
+    <div class="hero">
+      <iframe
+        src="https://www.youtube.com/embed/여기에_영상ID"
+        title="Newday Film" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   -->
 
-  <h1 class="hero-tagline">Every wedding has a story.</h1>
-  <p class="hero-sub">그날의 공기와 표정을 놓치지 않고 담습니다 — Newday Film</p>
-
-  <div class="highlight-row" style="grid-template-columns:repeat(3,1fr); max-width:640px;">
-    <a class="highlight-card" href="wedding-film.html">
-      <div class="ph" data-label="PHOTO"></div>
-      <div class="label">WEDDING FILM</div>
-    </a>
-    <a class="highlight-card" href="our-story.html">
-      <div class="ph" data-label="PHOTO"></div>
-      <div class="label">OUR STORY</div>
-    </a>
-    <a class="highlight-card" href="product.html">
-      <div class="ph" data-label="PHOTO"></div>
-      <div class="label">PRODUCT</div>
-    </a>
-  </div>
-
-  <div class="cta-row">
-    <a href="reservation.html">예약 문의하기</a>
-  </div>
 </main>
 
 <footer>
