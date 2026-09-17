@@ -120,8 +120,8 @@ nav.main-nav li.current > a{ color:var(--ink); font-weight:700; }
 .menu-btn{ display:none; }
 @media (max-width:700px){
   .logo-word{ font-size:44px; }
-  nav.main-nav ul{ overflow-x:auto; justify-content:flex-start; }
-  nav.main-nav li > a{ padding:14px 12px; white-space:nowrap; }
+  nav.main-nav ul{ overflow-x:auto; justify-content:center; flex-wrap:wrap; }
+  nav.main-nav li > a{ padding:14px 10px; white-space:nowrap; }
 }
 
 /* ===================== Footer ===================== */
