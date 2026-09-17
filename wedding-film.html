@@ -11,20 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .page-title{
-    text-align:center;
-    font-family:var(--serif);
-    font-size:44px;
-    color:var(--ink);
-    margin-bottom:12px;
-  }
-  .page-sub{
-    text-align:center;
-    font-size:13px;
-    color:var(--ink-soft);
-    margin-bottom:60px;
-  }
-
   .video-card{ max-width:800px; margin:0 auto 90px; }
   .video-card .ph{ aspect-ratio:16/9; }
   .video-card-title{
@@ -40,18 +26,6 @@
     font-size:12.5px;
     color:var(--accent);
     margin-top:8px;
-  }
-
-  /* 포트폴리오가 더 쌓이기 전까지, 안내 문구로 빈 느낌을 채움 */
-  .coming-soon{
-    max-width:800px;
-    margin:0 auto 40px;
-    text-align:center;
-    padding:50px 24px;
-    border:1px dashed var(--line);
-    color:var(--ink-soft);
-    font-size:13.5px;
-    line-height:1.9;
   }
 </style>
 </head>
@@ -80,22 +54,27 @@
 </header>
 
 
-<main class="wrap" style="padding:0 24px 60px;">
-  <h1 class="page-title">Wedding Film</h1>
-  <p class="page-sub">Newday Film이 담은 웨딩 필름입니다.</p>
+<main class="wrap" style="padding:40px 24px 60px;">
 
-  <!-- ▼ 영상 카드 1개 (본인 영상이 생기면 이 블록 전체를 복사해서 아래에 이어 붙이면 여러 개로 늘릴 수 있어요) -->
+  <!-- ▼ 영상 카드 (본인 영상이 더 생기면 이 블록 전체를 복사해서 아래에 이어 붙이면 돼요) -->
   <div class="video-card">
     <div class="ph" data-label="VIDEO"></div>
-    <div class="video-card-title">햇살 가득한 웨딩 필름</div>
+    <div class="video-card-title">그랜드하얏트 서울</div>
     <a href="#" class="video-card-link">원본 영상 보기 &rarr;</a>
   </div>
 
-  <!-- 포트폴리오가 아직 많지 않을 때를 위한 안내문 (영상이 여러 개 쌓이면 이 블록은 지우세요) -->
-  <div class="coming-soon">
-    더 많은 웨딩 필름이 준비 중입니다.<br>
-    곧 다양한 촬영 스타일을 만나보실 수 있어요.
+  <div class="video-card">
+    <div class="ph" data-label="VIDEO"></div>
+    <div class="video-card-title">신라호텔</div>
+    <a href="#" class="video-card-link">원본 영상 보기 &rarr;</a>
   </div>
+
+  <div class="video-card">
+    <div class="ph" data-label="VIDEO"></div>
+    <div class="video-card-title">파크하얏트 부산</div>
+    <a href="#" class="video-card-link">원본 영상 보기 &rarr;</a>
+  </div>
+
 </main>
 
 <footer>
