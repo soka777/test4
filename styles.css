@@ -128,7 +128,7 @@ nav.main-nav li.current > a{ color:var(--ink); font-weight:700; }
 footer{
   text-align:center;
   padding:60px 20px 50px;
-  margin-top:80px;
+
 }
 @media (max-width:700px){
   footer{ margin-top:40px; padding:40px 20px 36px; }
