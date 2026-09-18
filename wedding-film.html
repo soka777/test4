@@ -8,43 +8,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=2">
 <style>
-  .film-list{ max-width:920px; margin:0 auto; }
-  .film-row{
+  .film-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-    padding:50px 0;
-    border-bottom:1px solid var(--line);
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px 32px;
+    border-top:1px solid var(--line);
+    padding-top:50px;
   }
-  .film-row:first-child{ padding-top:0; }
-  .film-row:last-child{ border-bottom:none; }
-  .film-row:nth-child(even) .film-row-figure{ order:2; }
-  .film-row-figure .ph{ aspect-ratio:4/3; }
-  .film-row-figure iframe{ width:100%; aspect-ratio:4/3; display:block; border:0; }
-  .film-row-num{
-    font-family:'Marck Script', cursive;
-    font-size:24px;
+  .film-thumb{
+    position:relative;
+    margin-bottom:16px;
+  }
+  .film-thumb .ph{ aspect-ratio:4/3; transition:opacity .3s ease; }
+  .film-card:hover .film-thumb .ph{ opacity:0.85; }
+  .film-duration{
+    position:absolute;
+    right:10px; bottom:10px;
+    background:rgba(0,0,0,0.65);
+    color:#fff;
+    font-size:11.5px;
+    padding:3px 7px;
+    border-radius:4px;
+    letter-spacing:0.02em;
+  }
+  .film-label{
+    font-size:11px;
+    letter-spacing:0.25em;
     color:var(--accent);
-    margin-bottom:10px;
+    margin-bottom:8px;
   }
-  .film-row-title{
-    font-size:20px;
-    font-weight:600;
+  .film-title{
+    font-family:'Noto Serif KR', serif;
+    font-size:17px;
     color:var(--ink);
-    margin-bottom:10px;
-  }
-  .film-row-desc{
-    font-size:13.5px;
-    color:var(--ink-soft);
   }
 
-  @media (max-width:760px){
-    .film-row{ grid-template-columns:1fr; gap:20px; padding:36px 0; }
-    .film-row:nth-child(even) .film-row-figure{ order:0; }
+  @media (max-width:900px){
+    .film-grid{ grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width:560px){
+    .film-grid{ grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -73,66 +79,69 @@
 </header>
 
 <main class="wrap" style="padding:40px 24px 60px;">
-  <div class="film-list">
 
-    <!--
-      ▼ 유튜브 영상 연결 방법
-      아래 <div class="ph" data-label="VIDEO"></div> 한 줄을 이렇게 바꾸면 됩니다:
+  <!--
+    ▼ 유튜브 영상 연결 방법
+    아래 <div class="ph" data-label="VIDEO"></div> 한 줄을 이렇게 바꾸면 됩니다:
 
-      <iframe src="https://www.youtube.com/embed/여기에_영상ID"
-        title="그랜드하얏트 서울" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/여기에_영상ID"
+      title="영상 제목" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
 
-      영상ID는 유튜브 주소에서 찾으면 돼요.
-      예) https://youtu.be/ABC12345 → ID는 "ABC12345"
-    -->
+    영상ID는 유튜브 주소에서 찾으면 돼요.
+    예) https://youtu.be/ABC12345 → ID는 "ABC12345"
 
-    <div class="film-row">
-      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
-      <div class="film-row-info">
-        <div class="film-row-num">01</div>
-        <div class="film-row-title">라메르</div>
-       
+    재생시간(00:59 같은) 뱃지는 .film-duration 안의 텍스트를 실제 영상 길이로 바꾸면 됩니다.
+  -->
+
+  <div class="film-grid">
+
+    <a href="#" class="film-card">
+      <div class="film-thumb">
+        <div class="ph" data-label="VIDEO"></div>
+        <span class="film-duration">00:59</span>
       </div>
-    </div>
+      <div class="film-label">SHORTS</div>
+      <div class="film-title">라메르 — LA MER</div>
+    </a>
 
-    <div class="film-row">
-      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
-      <div class="film-row-info">
-        <div class="film-row-num">02</div>
-        <div class="film-row-title">라한호텔</div>
-       
+    <a href="#" class="film-card">
+      <div class="film-thumb">
+        <div class="ph" data-label="VIDEO"></div>
+        <span class="film-duration">01:23</span>
       </div>
-    </div>
+      <div class="film-label">SHORTS</div>
+      <div class="film-title">라한호텔 — LAHAN HOTEL</div>
+    </a>
 
-    <div class="film-row">
-      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
-      <div class="film-row-info">
-        <div class="film-row-num">03</div>
-        <div class="film-row-title">더 퀸</div>
-        
+    <a href="#" class="film-card">
+      <div class="film-thumb">
+        <div class="ph" data-label="VIDEO"></div>
+        <span class="film-duration">00:49</span>
       </div>
-    </div>
+      <div class="film-label">SHORTS</div>
+      <div class="film-title">더퀸 — THE QUEEN</div>
+    </a>
 
-    <div class="film-row">
-      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
-      <div class="film-row-info">
-        <div class="film-row-num">04</div>
-        <div class="film-row-title">더 누벨</div>
+    <a href="#" class="film-card">
+      <div class="film-thumb">
+        <div class="ph" data-label="VIDEO"></div>
+        <span class="film-duration">00:58</span>
       </div>
-    </div>
+      <div class="film-label">SHORTS</div>
+      <div class="film-title">더누벨 — THE NOUVELLE</div>
+    </a>
 
-    <div class="film-row">
-      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
-      <div class="film-row-info">
-        <div class="film-row-num">05</div>
-        <div class="film-row-title">포마레</div>
-        
+    <a href="#" class="film-card">
+      <div class="film-thumb">
+        <div class="ph" data-label="VIDEO"></div>
+        <span class="film-duration">01:06</span>
       </div>
-    </div>
+      <div class="film-label">SHORTS</div>
+      <div class="film-title">포마레 — POMARE</div>
+    </a>
 
-    
   </div>
 </main>
 
