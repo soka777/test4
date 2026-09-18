@@ -9,26 +9,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2">
 <style>
-  .video-card{ max-width:800px; margin:0 auto 90px; }
-  .video-card .ph{ aspect-ratio:16/9; }
-  .video-card-title{
-    text-align:center;
-    font-size:15.5px;
+  .film-list{ max-width:920px; margin:0 auto; }
+  .film-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    padding:50px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .film-row:first-child{ padding-top:0; }
+  .film-row:last-child{ border-bottom:none; }
+  .film-row:nth-child(even) .film-row-figure{ order:2; }
+  .film-row-figure .ph{ aspect-ratio:4/3; }
+  .film-row-figure iframe{ width:100%; aspect-ratio:4/3; display:block; border:0; }
+  .film-row-num{
+    font-family:'Marck Script', cursive;
+    font-size:24px;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .film-row-title{
+    font-size:20px;
     font-weight:600;
     color:var(--ink);
-    margin-top:22px;
+    margin-bottom:10px;
   }
-  .video-card-link{
-    display:block;
-    text-align:center;
-    font-size:12.5px;
-    color:var(--accent);
-    margin-top:8px;
+  .film-row-desc{
+    font-size:13.5px;
+    color:var(--ink-soft);
   }
-  @media (max-width:700px){
-    .video-card{ margin-bottom:56px; }
+
+  @media (max-width:760px){
+    .film-row{ grid-template-columns:1fr; gap:20px; padding:36px 0; }
+    .film-row:nth-child(even) .film-row-figure{ order:0; }
   }
 </style>
 </head>
@@ -56,73 +72,50 @@
   </div>
 </header>
 
+<main class="wrap" style="padding:40px 24px 60px;">
+  <div class="film-list">
 
-<main class="wrap" style="padding:40px 24px 60px;" id="mainContent">
+    <!--
+      ▼ 유튜브 영상 연결 방법
+      아래 <div class="ph" data-label="VIDEO"></div> 한 줄을 이렇게 바꾸면 됩니다:
 
-  <!-- ▼ 영상 카드 (본인 영상이 더 생기면 이 블록 전체를 복사해서 아래에 이어 붙이면 돼요) -->
-  <div class="video-card">
-    <div style="aspect-ratio:16/9;">
-      <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/여기에_영상ID"
-      title="라메르" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/여기에_영상ID"
+        title="그랜드하얏트 서울" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      영상ID는 유튜브 주소에서 찾으면 돼요.
+      예) https://youtu.be/ABC12345 → ID는 "ABC12345"
+    -->
+
+    <div class="film-row">
+      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
+      <div class="film-row-info">
+        <div class="film-row-num">01</div>
+        <div class="film-row-title">그랜드하얏트 서울</div>
+        <p class="film-row-desc">도심 속 정원에서 완성한 봄의 예식</p>
+      </div>
     </div>
-    <div class="video-card-title">라메르</div>
-  </div>
 
-  <div class="video-card">
-    <div style="aspect-ratio:16/9;">
-      <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/여기에_영상ID"
-      title="라한호텔" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-      </iframe>
+    <div class="film-row">
+      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
+      <div class="film-row-info">
+        <div class="film-row-num">02</div>
+        <div class="film-row-title">신라호텔</div>
+        <p class="film-row-desc">클래식한 홀에서의 우아한 저녁 예식</p>
+      </div>
     </div>
-    <div class="video-card-title">라한호텔</div>
-  </div>
 
-  <div class="video-card">
-    <div style="aspect-ratio:16/9;">
-      <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/여기에_영상ID"
-      title="더누벨" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-      </iframe>
+    <div class="film-row">
+      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
+      <div class="film-row-info">
+        <div class="film-row-num">03</div>
+        <div class="film-row-title">파크하얏트 부산</div>
+        <p class="film-row-desc">바다가 내려다보이는 오후의 기록</p>
+      </div>
     </div>
-    <div class="video-card-title">더 누벨</div>
+
   </div>
-
-  <div class="video-card">
-    <div style="aspect-ratio:16/9;">
-      <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/여기에_영상ID"
-      title="더퀸" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-card-title">더 퀸</div>
-  </div>
-
-  <div class="video-card">
-    <div style="aspect-ratio:16/9;">
-      <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/여기에_영상ID"
-      title="포마레" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-card-title">포마레</div>
-  </div>
-  
-
-
-
 </main>
 
 <footer>
