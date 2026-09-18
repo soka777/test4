@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Wedding Film — Newday Film</title>
+<meta name="description" content="Newday Film 웨딩 필름 모음">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+<style>
+  .film-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    border-top:1px solid var(--ink);
+    border-left:1px solid var(--ink);
+  }
+  .film-item{
+    border-right:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+  }
+  .film-item .ph{
+    aspect-ratio:4/3;
+    border:none;
+    transition:opacity .3s ease;
+  }
+  .film-item:hover .ph{ opacity:0.85; }
+  .film-item-title{
+    padding:16px 18px;
+    font-size:14px;
+    color:var(--ink);
+  }
+
+  @media (max-width:900px){
+    .film-grid{ grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width:560px){
+    .film-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-word"><a href="index.html">Newday Film</a></div>
+  <div class="logo-sub">FILM STUDIO</div>
+
+  <nav class="main-nav">
+    <div class="wrap">
+      <ul>
+        <li class=""><a href="our-story.html">OUR STORY</a></li>
+        <li class="current"><a href="wedding-film.html">WEDDING FILM</a></li>
+        <li class=""><a href="product.html">PRODUCT</a></li>
+        <li class=""><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="social-row">
+    <a href="#" aria-label="Instagram">IG</a>
+    <a href="#" aria-label="Blog">B</a>
+    <a href="#" aria-label="KakaoTalk">T</a>
+  </div>
+</header>
+
+<main class="wrap" style="padding:40px 24px 60px;">
+
+  <!-- ▼ 영상 그리드 (영상이 더 생기면 <div class="film-item">...</div> 블록을 복사해서 이어 붙이면 자동으로 다음 줄로 넘어가요) -->
+  <div class="film-grid">
+    <a href="#" class="film-item">
+      <div class="ph" data-label="VIDEO"></div>
+      <div class="film-item-title">그랜드하얏트 서울</div>
+    </a>
+    <a href="#" class="film-item">
+      <div class="ph" data-label="VIDEO"></div>
+      <div class="film-item-title">신라호텔</div>
+    </a>
+    <a href="#" class="film-item">
+      <div class="ph" data-label="VIDEO"></div>
+      <div class="film-item-title">파크하얏트 부산</div>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-info">
+    ADDRESS <b>OO시 OO구 OO로 00</b> &nbsp;|&nbsp; TEL <b>010-0000-0000</b>
+  </div>
+  <div class="copyright">Copyright (C) Newday Film All Rights Reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

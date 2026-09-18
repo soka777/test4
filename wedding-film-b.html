@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Wedding Film (B) — Newday Film</title>
+<meta name="description" content="Newday Film 웨딩 필름 모음">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+<style>
+  .film-list{ max-width:920px; margin:0 auto; }
+  .film-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    padding:50px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .film-row:first-child{ padding-top:0; }
+  .film-row:nth-child(even) .film-row-figure{ order:2; }
+  .film-row-figure .ph{ aspect-ratio:4/3; }
+  .film-row-num{
+    font-family:'Marck Script', cursive;
+    font-size:24px;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .film-row-title{
+    font-size:20px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .film-row-desc{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .film-row-link{
+    font-size:12.5px;
+    color:var(--accent);
+  }
+
+  @media (max-width:760px){
+    .film-row{ grid-template-columns:1fr; gap:20px; padding:36px 0; }
+    .film-row:nth-child(even) .film-row-figure{ order:0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-word"><a href="index.html">Newday Film</a></div>
+  <div class="logo-sub">FILM STUDIO</div>
+
+  <nav class="main-nav">
+    <div class="wrap">
+      <ul>
+        <li class=""><a href="our-story.html">OUR STORY</a></li>
+        <li class="current"><a href="wedding-film-b.html">WEDDING FILM</a></li>
+        <li class=""><a href="product.html">PRODUCT</a></li>
+        <li class=""><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="social-row">
+    <a href="#" aria-label="Instagram">IG</a>
+    <a href="#" aria-label="Blog">B</a>
+    <a href="#" aria-label="KakaoTalk">T</a>
+  </div>
+</header>
+
+<main class="wrap" style="padding:40px 24px 60px;">
+  <div class="film-list">
+
+    <div class="film-row">
+      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
+      <div class="film-row-info">
+        <div class="film-row-num">01</div>
+        <div class="film-row-title">그랜드하얏트 서울</div>
+        <p class="film-row-desc">도심 속 정원에서 완성한 봄의 예식</p>
+        <a href="#" class="film-row-link">원본 영상 보기 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="film-row">
+      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
+      <div class="film-row-info">
+        <div class="film-row-num">02</div>
+        <div class="film-row-title">신라호텔</div>
+        <p class="film-row-desc">클래식한 홀에서의 우아한 저녁 예식</p>
+        <a href="#" class="film-row-link">원본 영상 보기 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="film-row">
+      <div class="film-row-figure"><div class="ph" data-label="VIDEO"></div></div>
+      <div class="film-row-info">
+        <div class="film-row-num">03</div>
+        <div class="film-row-title">파크하얏트 부산</div>
+        <p class="film-row-desc">바다가 내려다보이는 오후의 기록</p>
+        <a href="#" class="film-row-link">원본 영상 보기 &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-info">
+    ADDRESS <b>OO시 OO구 OO로 00</b> &nbsp;|&nbsp; TEL <b>010-0000-0000</b>
+  </div>
+  <div class="copyright">Copyright (C) Newday Film All Rights Reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
