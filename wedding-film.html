@@ -9,61 +9,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css">
 <style>
-  .video-card{ max-width:800px; margin:0 auto 100px; }
-  .video-card .ph{
-    aspect-ratio:16/9;
-    transition:opacity .3s ease;
-  }
-  .video-card:hover .ph{ opacity:0.85; }
-  .video-card-num{
-    text-align:center;
-    font-family:'Marck Script', cursive;
-    font-size:26px;
-    color:var(--accent);
-    margin-bottom:10px;
-  }
+  .video-card{ max-width:800px; margin:0 auto 90px; }
+  .video-card .ph{ aspect-ratio:16/9; }
   .video-card-title{
     text-align:center;
-    font-size:16.5px;
+    font-size:15.5px;
     font-weight:600;
     color:var(--ink);
     margin-top:22px;
-  }
-  .video-card-desc{
-    text-align:center;
-    font-size:13px;
-    color:var(--ink-soft);
-    margin-top:6px;
   }
   .video-card-link{
     display:block;
     text-align:center;
     font-size:12.5px;
     color:var(--accent);
-    margin-top:14px;
-    position:relative;
+    margin-top:8px;
   }
-  .video-card-link::after{
-    content:"";
-    display:block;
-    width:0;
-    height:1px;
-    background:var(--accent);
-    margin:4px auto 0;
-    transition:width .25s ease;
-  }
-  .video-card-link:hover::after{ width:70px; }
-
-  .video-card:not(:first-child){
-    border-top:1px solid var(--line);
-    padding-top:60px;
-  }
-
   @media (max-width:700px){
-    .video-card{ margin-bottom:64px; }
-    .video-card:not(:first-child){ padding-top:44px; }
+    .video-card{ margin-bottom:56px; }
   }
 </style>
 </head>
@@ -96,28 +61,67 @@
 
   <!-- ▼ 영상 카드 (본인 영상이 더 생기면 이 블록 전체를 복사해서 아래에 이어 붙이면 돼요) -->
   <div class="video-card">
-    <div class="video-card-num">01</div>
-    <div class="ph" data-label="VIDEO"></div>
-    <div class="video-card-title">그랜드하얏트 서울</div>
-    <p class="video-card-desc">도심 속 정원에서 완성한 봄의 예식</p>
-    <a href="#" class="video-card-link">원본 영상 보기 &rarr;</a>
+    <div style="aspect-ratio:16/9;">
+      <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/여기에_영상ID"
+      title="라메르" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-card-title">라메르</div>
   </div>
 
   <div class="video-card">
-    <div class="video-card-num">02</div>
-    <div class="ph" data-label="VIDEO"></div>
-    <div class="video-card-title">신라호텔</div>
-    <p class="video-card-desc">클래식한 홀에서의 우아한 저녁 예식</p>
-    <a href="#" class="video-card-link">원본 영상 보기 &rarr;</a>
+    <div style="aspect-ratio:16/9;">
+      <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/여기에_영상ID"
+      title="라한호텔" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-card-title">라한호텔</div>
   </div>
 
   <div class="video-card">
-    <div class="video-card-num">03</div>
-    <div class="ph" data-label="VIDEO"></div>
-    <div class="video-card-title">파크하얏트 부산</div>
-    <p class="video-card-desc">바다가 내려다보이는 오후의 기록</p>
-    <a href="#" class="video-card-link">원본 영상 보기 &rarr;</a>
+    <div style="aspect-ratio:16/9;">
+      <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/여기에_영상ID"
+      title="더누벨" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-card-title">더 누벨</div>
   </div>
+
+  <div class="video-card">
+    <div style="aspect-ratio:16/9;">
+      <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/여기에_영상ID"
+      title="더퀸" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-card-title">더 퀸</div>
+  </div>
+
+  <div class="video-card">
+    <div style="aspect-ratio:16/9;">
+      <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/여기에_영상ID"
+      title="포마레" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-card-title">포마레</div>
+  </div>
+  
+
+
 
 </main>
 
