@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Marcellus&family=Cinzel:wght@500&family=Josefin+Sans:wght@600&display=swap');
+
 /* =========================================================
    NEWDAY FILM — 공용 스타일시트 (센터 정렬 헤더 형식)
    여기 :root 값만 바꾸면 사이트 전체 색/간격이 바뀝니다.
@@ -63,11 +65,103 @@ header{
   padding:50px 0 0;
   text-align:center;
 }
+/* ===================== 로고 서체 선택 =====================
+   기본은 '조합'입니다. 1~4번은 숨겨둔 상태예요.
+   바꾸는 법: 원하는 번호 블록 위아래의 슬래시별 줄과 별슬래시 줄,
+   이 두 줄만 지우면 그 서체로 바뀝니다. (아래에 있는 블록이 위 블록을 덮어씀)
+   여러 번호를 동시에 켜면 가장 아래 것이 적용되니, 한 번에 하나만 켜주세요.
+   (HTML은 그대로 두고 이 부분만 바꾸면 모든 페이지에 적용됩니다)
+   --logo-size : PC 글자 크기 / --logo-size-m : 모바일 글자 크기
+   ============================================================ */
+
+/* ▶ 현재 적용: 조합 — NEWDAY(Cormorant Garamond) + film(Marck Script) */
+:root{
+  --logo-font:'Cormorant Garamond', serif;
+  --logo-weight:600;
+  --logo-track:0.2em;
+  --logo-size:52px;
+  --logo-size-m:40px;
+  --logo-tail:none;
+  --logo-script:block;
+}
+
+/* 1번 — Cormorant Garamond SemiBold */
+/*
+:root{
+  --logo-font:'Cormorant Garamond', serif;
+  --logo-weight:600;
+  --logo-track:0.22em;
+  --logo-size:44px;
+  --logo-size-m:26px;
+  --logo-tail:inline;
+  --logo-script:none;
+}
+*/
+
+/* 2번 — Marcellus */
+/*
+:root{
+  --logo-font:'Marcellus', serif;
+  --logo-weight:400;
+  --logo-track:0.2em;
+  --logo-size:40px;
+  --logo-size-m:24px;
+  --logo-tail:inline;
+  --logo-script:none;
+}
+*/
+
+/* 3번 — Cinzel */
+/*
+:root{
+  --logo-font:'Cinzel', serif;
+  --logo-weight:500;
+  --logo-track:0.16em;
+  --logo-size:38px;
+  --logo-size-m:22px;
+  --logo-tail:inline;
+  --logo-script:none;
+}
+*/
+
+/* 4번 — Josefin Sans SemiBold */
+/*
+:root{
+  --logo-font:'Josefin Sans', sans-serif;
+  --logo-weight:600;
+  --logo-track:0.26em;
+  --logo-size:38px;
+  --logo-size-m:22px;
+  --logo-tail:inline;
+  --logo-script:none;
+}
+*/
+
 .logo-word{
-  font-family:var(--serif);
-  font-size:64px;
+  font-size:var(--logo-size);
   color:var(--ink);
   line-height:1;
+}
+.logo-word a{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+}
+.logo-line{
+  font-family:var(--logo-font);
+  font-weight:var(--logo-weight);
+  letter-spacing:var(--logo-track);
+  padding-left:var(--logo-track); /* 자간 때문에 오른쪽으로 쏠리는 것 보정 */
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.logo-tail{ display:var(--logo-tail); }
+.logo-script{
+  display:var(--logo-script);
+  font-family:'Marck Script', cursive;
+  font-size:0.58em;
+  line-height:1.1;
+  margin-top:2px;
 }
 .logo-sub{
   font-size:12px;
@@ -119,7 +213,7 @@ nav.main-nav li.current > a{ color:var(--ink); font-weight:700; }
 /* ===================== Mobile menu button ===================== */
 .menu-btn{ display:none; }
 @media (max-width:700px){
-  .logo-word{ font-size:44px; }
+  .logo-word{ font-size:var(--logo-size-m); }
   nav.main-nav ul{ overflow-x:auto; justify-content:center; flex-wrap:wrap; }
   nav.main-nav li > a{ padding:14px 10px; white-space:nowrap; }
 }
