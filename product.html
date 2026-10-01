@@ -62,6 +62,12 @@
     margin-top:8px;
     line-height:1.8;
   }
+  .menu-item-row .price .old{
+    color:var(--ink-faint);
+    text-decoration:line-through;
+    margin-right:8px;
+  }
+  .menu-item-row .price .sale{ color:var(--accent); }
   @media (max-width:700px){
     main{ padding:30px 24px 40px !important; }
     .product-title{ margin-bottom:36px; }
@@ -101,8 +107,9 @@
     <div class="menu-section-title">PACKAGE</div>
 
     <div class="menu-item">
-      <div class="menu-item-row"><span class="name">베이직</span><span class="dots"></span><span class="price">49만원</span></div>
+      <div class="menu-item-row"><span class="name">베이직</span><span class="dots"></span><span class="price"><span class="old">49만원</span><span class="sale">39만원</span></span></div>
       <p class="desc">1인 2캠 · 식전영상 · 본식영상 · 식후영상 · 1분 하이라이트 영상</p>
+      <p class="note">리뉴얼 이벤트 가격으로 선착순 10팀만 모집합니다.</p>
     </div>
 
     <div class="menu-item">
@@ -110,11 +117,13 @@
       <p class="desc">1인 3캠 · 식전영상 · 본식영상 · 식후영상 · 부모님 하이라이트 영상 · 3-4분 하이라이트 영상</p>
     </div>
 
+    <!-- 2인 프리미엄: 잠시 숨김 (다시 노출하려면 이 주석을 해제하세요)
     <div class="menu-item">
       <div class="menu-item-row"><span class="name">2인 프리미엄</span><span class="dots"></span><span class="price">99만원</span></div>
       <p class="desc">2인 3캠 · 식전영상 · 본식영상 · 식후영상 · 부모님 하이라이트 영상 · 3-4분 하이라이트 영상</p>
       <p class="note">2인 촬영의 장점은 신부대기실, 하객맞이 파트를 각자 나누어 촬영하기에 신랑, 신부님 그리고 부모님의 모습을 많이 담을 수 있습니다.</p>
     </div>
+    -->
   </div>
 
   <!-- 옵션 -->
