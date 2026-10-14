@@ -68,6 +68,49 @@
     margin-right:8px;
   }
   .menu-item-row .price .sale{ color:var(--accent); }
+
+  /* ===== 이벤트 배너 =====
+     아래 .event-box 는 이벤트 안내를 보여주는 박스입니다.
+     문구만 바꾸고 싶으면 .event-list 안의 <li> 내용만 수정하면 됩니다.
+     이벤트를 하나 더 추가하려면 <li>...</li> 한 줄을 그대로 복사해서 아래에 붙여넣고 내용만 바꾸세요.
+     이벤트를 잠시 숨기고 싶으면 .event-box 전체를 <!-- 와 --> 로 감싸면 됩니다. */
+  .event-box{
+    max-width:640px;
+    margin:0 auto 56px;
+    border:1px solid var(--accent);
+    border-radius:4px;
+    padding:24px 28px;
+  }
+  .event-box .event-title{
+    font-size:13px;
+    letter-spacing:0.3em;
+    color:var(--accent);
+    margin-bottom:16px;
+  }
+  .event-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .event-list li{
+    font-size:14.5px;
+    color:var(--ink);
+    line-height:1.9;
+    padding-left:18px;
+    position:relative;
+  }
+  .event-list li::before{
+    content:"•";
+    color:var(--accent);
+    position:absolute;
+    left:0;
+  }
+  .event-list li b{
+    color:var(--accent);
+    font-weight:600;
+  }
+  /* ===== 이벤트 배너 끝 ===== */
+
   @media (max-width:700px){
     main{ padding:30px 24px 40px !important; }
     .product-title{ margin-bottom:36px; }
@@ -101,6 +144,19 @@
 
 <main class="wrap" style="padding:50px 24px 80px;">
   <div class="product-title">Product</div>
+
+  <!-- ===== 이벤트 배너 (여기 내용만 수정하면 됩니다) =====
+       - 이벤트 추가: <li> 한 줄을 복사해서 붙여넣고 내용만 수정
+       - 이벤트 삭제: 해당 <li>...</li> 한 줄을 지우기
+       - 이벤트 전체 숨기기: 아래 .event-box 전체를 <!-- 와 --> 로 감싸기 -->
+  <div class="event-box">
+    <div class="event-title">EVENT</div>
+    <ul class="event-list">
+      <li>블로그 계약후기 작성 시 <b>3만원</b> 페이백</li>
+      <li>짝궁(지인) 추천 시 <b>2만원</b> 페이백</li>
+    </ul>
+  </div>
+  <!-- ===== 이벤트 배너 끝 ===== -->
 
   <!-- 패키지 -->
   <div class="menu-section">

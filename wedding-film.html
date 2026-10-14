@@ -25,7 +25,6 @@
     overflow:hidden;
   }
   .film-thumb .ph{ aspect-ratio:4/3; transition:opacity .3s ease; }
-  .film-card:hover .film-thumb .ph{ opacity:0.85; }
 
   /* 유튜브 썸네일 */
   .film-thumb .yt-thumb{
@@ -36,7 +35,6 @@
     background:#111;
     transition:transform .5s ease, opacity .3s ease;
   }
-  .film-card:hover .yt-thumb{ transform:scale(1.04); opacity:0.9; }
 
   /* 재생 버튼 */
   .film-play{
@@ -58,7 +56,14 @@
     border-width:9px 0 9px 15px;
     border-color:transparent transparent transparent #fff;
   }
-  .film-card:hover .film-play{ background:rgba(0,0,0,0.65); transform:scale(1.08); }
+
+  /* 호버 효과는 마우스가 있는 PC(데스크탑)에서만 적용합니다.
+     모바일/터치 기기는 여기서 완전히 제외되어, 첫 탭에서 바로 영상이 재생됩니다. */
+  @media (hover: hover) and (pointer: fine){
+    .film-card:hover .film-thumb .ph{ opacity:0.85; }
+    .film-card:hover .yt-thumb{ transform:scale(1.04); opacity:0.9; }
+    .film-card:hover .film-play{ background:rgba(0,0,0,0.65); transform:scale(1.08); }
+  }
 
   .film-duration{
     position:absolute;
