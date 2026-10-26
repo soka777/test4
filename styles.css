@@ -248,3 +248,10 @@ footer .copyright{
   max-width:700px;
   margin:0 auto 60px;
 }
+
+
+.highlight-pen {
+  background: linear-gradient(to top, #ffeb3b 40%, transparent 40%);
+  padding: 0 4px;
+  font-weight: bold;
+}
